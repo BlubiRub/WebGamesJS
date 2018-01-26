@@ -1,12 +1,19 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  var canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent('sketch');
 }
 
 function draw() {
-  if (mouseIsPressed) {
-    fill(0);
-  } else {
-    fill(255);
-  }
-  ellipse(mouseX, mouseY, 50, 50);
+  background(60, 60, 60);
+
+  //Player
+  stroke(255,255,255);
+  fill(0,0,255);
+  rect(1200 - 300, windowHeight - 400, 200, 300);
+
+  //Enemy
+  stroke(255,255,255);
+  fill(255,0,0);
+  rect(0+300, 0+50, 66, 110);
+
 }
